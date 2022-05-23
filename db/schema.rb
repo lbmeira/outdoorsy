@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2022_05_22_150622) do
 
   create_table "vehicles", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type", null: false
-    t.decimal "length_value", null: false
+    t.string "vehicle_type", null: false
+    t.float "length_value", null: false
     t.string "length_type", null: false
     t.integer "person_id", null: false
     t.datetime "created_at", precision: 6, null: false
