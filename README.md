@@ -1,31 +1,39 @@
+# Prerequisites
+The Setup section expects following to be installed:
+- Github
+- Ruby [2.6.6](https://github.com/lbmeira/outdoorsy/blob/main/.ruby-version#L1)
+- Rails [6.0.5](https://github.com/lbmeira/outdoorsy/blob/main/Gemfile#L7)
+
+
 # Setup
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
+1. Check out the repository
+```
+https://github.com/lbmeira/outdoorsy.git
+```
+2. Run database migrations
+```
+rake db:migrate
+```
+3. Confirm that the migrations ran successfully 
+```
+rake db:migrate:status
+```
 
 # Usage
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+Running testing suite:
+```
+rails t
+```
 
 # Assumptions
 
+
 # Future enhancements
+* Improve test coverage/cases
+* Add more logging
 
 
 # Problem statement
