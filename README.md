@@ -32,7 +32,7 @@ rake import_customer_data['test/fixtures/files/commas.txt','\,']
 ```
 
 ```
-# Imports customer data separated by commas
+# Imports customer data separated by pipes
 rake import_customer_data['test/fixtures/files/pipes.txt','|']
 ```
 The `import_customer_data` rake task will create **new** `Person` and `Vehicle` DB records
@@ -53,7 +53,7 @@ The `export_customer_data` rake task will export the customer data to a comma se
 # Assumptions
 * We want the data in a persistent storage
 * Expect customer data input to be valid
-* Expect format to comma/pipe separated txt files
+* Expect file format to be a comma/pipe separated .txt
 * We are asumming a person (customer) can have multiple vehicles
 
 # Future enhancements
