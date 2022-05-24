@@ -27,7 +27,3 @@ class PersonTest < ActiveSupport::TestCase
     assert_equal ["can't be blank"], person.errors[:email]
   end
 end
-
-# ActiveRecord::NotNullViolation: RuntimeError:
-# needed to delete people.yml
-# I am used to using factory girl

@@ -16,11 +16,3 @@ task :import_customer_data, %i[file_path delimeter] => :environment do |_, args|
   CustomerDataImportService.new(file_path, delimeter).process
   puts 'Done!'
 end
-
-# smart delimeter detection
-# 1. read ahead (first line)
-# 2. file name pattern (determines what type of delimeter)
-
-# cannot introduce private method, because there could be collisions in different rake tasks
-# rails autloads all rake tasks in alphanumerical  order
-# solution would be to ensure unique name

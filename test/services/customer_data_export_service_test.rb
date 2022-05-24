@@ -28,5 +28,3 @@ class CustomerDataExportServiceTest < ActiveSupport::TestCase
     assert_equal expected_csv, actual_csv
   end
 end
-
-# need to expliclity load services folder in application.rb

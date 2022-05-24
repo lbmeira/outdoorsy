@@ -37,5 +37,3 @@ class CustomerDataImportServiceTest < ActiveSupport::TestCase
     end
   end
 end
-
-# need to expliclity load services folder in application.rb

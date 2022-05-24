@@ -30,7 +30,7 @@ class CustomerDataExportService
     when 'full_name'
       Person.select(select_query).joins(:vehicles).order(:first_name,:last_name)
     when 'vehicle_type'
-      Person.select(select_query).joins(:vehicles).order(:vehicle_type)
+      Person.select(select_query).joins(:vehicles).order('lower(vehicle_type)')
     else
       Person.select(select_query).joins(:vehicles)
     end

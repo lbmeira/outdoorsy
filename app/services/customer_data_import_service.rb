@@ -42,12 +42,3 @@ class CustomerDataImportService
     end
   end
 end
-
-# initial thought can require 'csv' and parse given col_sep
-# files are not csv
-
-# allows service to be utilized by different, sources:
-  # external apis, web app page, download to S3, different rake jobs
-
-# note: wrap block in transaction, error handling
-# instead of falling entire import, print out list of failed records
