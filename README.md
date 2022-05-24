@@ -20,12 +20,12 @@ rake db:migrate:status
 ```
 
 # Usage
-Running testing suite:
+**Running testing suite:**
 ```
 rails t
 ```
 
-Importing customer data
+**Importing customer data:**
 ```
 # Imports customer data separated by commas
 rake import_customer_data['test/fixtures/files/commas.txt','\,']
@@ -37,7 +37,7 @@ rake import_customer_data['test/fixtures/files/pipes.txt','|']
 ```
 The `import_customer_data` rake task will create **new** `Person` and `Vehicle` DB records
 
-Exporting customer data:
+**Exporting customer data:**
 * Customer data includes: First name, Last name, Email, Vehicle type, Vehicle name, and Vehicle length
 ```
 # Exports customer data sorted by vehicle type
