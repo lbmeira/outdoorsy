@@ -20,21 +20,54 @@ rake db:migrate:status
 ```
 
 # Usage
-* Services (job queues, cache servers, search engines, etc.)
-
-
 Running testing suite:
 ```
 rails t
 ```
 
-# Assumptions
+Importing customer data
+```
+# Imports customer data separated by commas
+rake import_customer_data['test/fixtures/files/commas.txt','\,']
+```
 
+```
+# Imports customer data separated by commas
+rake import_customer_data['test/fixtures/files/pipes.txt','|']
+```
+The `import_customer_data` rake task will create **new** `Person` and `Vehicle` DB records
+
+Exporting customer data:
+* Customer data includes: First name, Last name, Email, Vehicle type, Vehicle name, and Vehicle length
+```
+# Exports customer data sorted by vehicle type
+rake export_customer_data['vehicle_type']
+```
+
+```
+# Exports customer data sorted by full name
+rake export_customer_data['full_name']
+```
+The `export_customer_data` rake task will export the customer data to a comma separated file with a named based on the time of the export run (`"customer_data_export_#{Time.now.strftime("%Y%m%d%k%M%S")}.csv"`)
+
+# Assumptions
+* We want the data in a persistent storage
+* Expect customer data input to be valid
+* Expect format to comma/pipe separated txt files
+* We are asumming a person (customer) can have multiple vehicles
 
 # Future enhancements
-* Improve test coverage/cases
+* Improve test coverage and add corner cases
 * Add more logging
+* Performance testing
+* Add data validation and error handling
 
+# Additional questions
+* Who are the stakeholders (customer)? What do they care about?
+* How does Outdoor.sy expect to use this tool?
+* How many users do we expect to use this tool at the same time?
+* How big are the customer files?
+* (Security) Are there any special considerations around the data that is captured today or that might be captured in the future (PII)?
 
 # Problem statement
 We’d like you to code a small tool for a fictional company called Outdoor.sy that takes some of their customer lists and returns the data in different sorted orders.
