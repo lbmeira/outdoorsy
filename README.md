@@ -61,6 +61,7 @@ The `export_customer_data` rake task will export the customer data to a comma se
 * Add more logging
 * Performance testing
 * Add data validation and error handling
+* Linting
 
 # Additional questions
 * Who are the stakeholders (customer)? What do they care about?
